@@ -12,6 +12,20 @@
     <h1>Image Gallery</h1>
     <a class="btn btn-primary" href="create.php">Upload New Image</a>
    
+    <div class="list-group">
+        <?php foreach ($images as $img): ?>
+            <div class="list-group-item">
+                <h5><?= $row['title'] ?></h5>
+                <?php if ($row['filename']): ?>
+                    <img src="uploads/<?= $row['filename'] ?>" class="img-fluid mb-2">
+                <?php endif; ?>
+                <a class="btn btn-primary btn-sm" href="edit.php?id=<?= $row['id'] ?>">Edit</a>
+                <a class="btn btn-danger btn-sm" href="delete.php?id=<?= $row['id'] ?>">Delete</a>
+            </div>
+        <?php endwhile; ?>
     </div>
+<?php else: ?>
+    <p>No images uploaded yet.</p>
+<?php endif; ?>
 </body>
 </html>
