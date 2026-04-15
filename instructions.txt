@@ -1,0 +1,39 @@
+Application: Image Gallery App 
+
+Create a PHP web application that allows an admin user to manage a simple image gallery.
+
+The application must allow the admin to:
+
+
+
+register an account (username, email, password)
+log in securely
+upload an image with a title
+view all uploaded images and titles
+delete an existing image record
+
+
+Requirements
+
+
+
+Your solution must:
+
+validate all form input on the server, including ensuring no empty fields are submitted, and that the proper email format is given 
+hash passwords before storing them and verify passwords using password_verify( ) during login
+use sessions to restrict access to logged-in admins only
+validate uploaded files and restrict uploads to image types
+store uploaded images in an uploads/ folder
+store image file paths in the database
+use PDO prepared statements for all database operations
+display clear success and error messages to the user
+
+
+You must also:
+
+deploy your application to the production server (include link in answer submission) 
+create a GitHub repository named: COMP1006_Winter2026_FinalExam (include link to repo in submission) 
+push your work to the repository using at least 3 meaningful commits* 
+
+
+*Commits should reflect progress (e.g., setup, authentication, gallery features). Avoid submitting all work in a single commit.
