@@ -38,8 +38,8 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
 
 
 if (empty($errors)) {
-    $stmt = $conn->prepare("INSERT INTO images (user_id, title, description, filename) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("isss", $_SESSION['user_id'], $title, $description, $image_file_name);
+    $stmt = $conn->prepare("INSERT INTO images (user_id, title, filename) VALUES (?, ?, ?)");
+    $stmt->bind_param("isss", $_SESSION['user_id'], $title, $image_file_name);
     $stmt->execute();
     header("Location: index.php");
     exit();
